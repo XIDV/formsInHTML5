@@ -3,12 +3,12 @@
 
 <!--                                                      head-section -->
     <head>
-        <title><!-- INSERT TITLE HERE --></title>
+        <title>Formularelemente und Attribute in HTML5</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Sebastian Peschl">
-        <!-- <meta name="description" content=""> -->
+        <meta name="description" content="Erleuterung und Demonstration einiger Formularelemente und deren Attribute in HTML5">
         <meta name="generator" content="Visual Studio Code">
 
         <link rel="stylesheet" href="style.css">
@@ -19,8 +19,8 @@
     <body>
         <div id="pageWrapper">
             <header id="pageHeader">
-                <div id="headerTitle"><!-- INSERT HEADERTITLE HERE --></div>
-                <div id="headerSubtitle"><!-- INSERT SUBTITLE HERE --></div>
+                <div id="headerTitle">Formularelemente und Attribute in HTML5</div>
+                <div id="headerSubtitle">Erleuterung und Demonstration einiger Formularelemente und deren Attribute in HTML5</div>
             </header>
 
             <!-- <nav id="mainNav"></nav> -->
@@ -29,35 +29,48 @@
                 
                 <section class="mainContent" id="primaryContent">
                     <header class="sectionHeader">
-                        <h1 class="sectionTitle"><!-- INSERT SECTIONTITLE HERE --></h1>
-                        <div class="sectionSubtitle"><!-- INSERT SUBTITLE HERE --></div>
+                        <h1 class="sectionTitle">Benutzerfreudlichkeit bei Formularen</h1>
+                        <div class="sectionSubtitle">Semantisch korrekte Auszeichnung als essentieller Bestandteil f. Benutzerfreudlichkeit und Barrierefreiheit.</div>
                     </header>
                     <div class="sectionContentText">
                         <p>
-                            <!-- INSERT CONTENT HERE -->
+                            Die Benutzerfreudlichkeit stellt einen zentralen Aspekt bei der Erstellung (und Gesstaltung) von Formularen dar. Sie sind eine wesentliche Schnittstelle zwischen User und Anbieter einer Website. Dementsprechend tragen Sie einen erheblichen Anteil zum Erfolg einer Website bei.
                         </p>
                     </div>
                 </section>
 
                 <section class="mainContent">
                     <header class="sectionHeader">
-                        <h2 class="sectionTitle"><!-- INSERT SECTIONTITLE HERE --></h2>
+                        <h2 class="sectionTitle">Beispiele / Demonstrationen</h2>
                         <div class="sectionSubtitle"><!-- INSERT SUBTITLE HERE --></div>
                     </header>
                     <div class="sectionContentText">
                         <p>
-                            <!-- INSERT CONTENT HERE -->
+                            Erfahren Sie nachfolgend einiges über die Formularelemente in HTML5.
                         </p>
                     </div>
                     <article class="demoBox">
                         <header class="demoBoxHeader">
-                            <h3 class="artTitle"><!-- INSERT ARTICLETITLE HERE --></h3>
-                            <div class="artSubtitle"><!-- INSERT SUBTITLE HERE --></div>
+                            <h3 class="artTitle">Beispiel 1</h3>
+                            <div class="artSubtitle">Vorstellung einiger Formularelemente</div>
                         </header>
                         <div class="sandboxContainer">
 
-                            <!-- INSERT STUFF FOR DEMONSTRATION HERE -->
+                            <form method="post" class="demoForm" id="bspl1" autocomplete="off">
+                                <div class="elementBox">
+                                    <label>Suche
+                                        <input type="search" name="search" id="search" autofocus>
+                                    </label>
+
+                                </div>
+                                
+                                <button type="submit" id="subBspl1Data" form="bspl1">Senden</button>
+                            </form>
                         
+                            <dialog id="bspl1Output">
+                                <h3>Dialog</h3>
+                                <button type="button">Schließen</button>
+                            </dialog>
                         </div>
                     </article>
                 </section>
