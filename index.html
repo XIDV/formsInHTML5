@@ -52,18 +52,71 @@
                     <article class="demoBox">
                         <header class="demoBoxHeader">
                             <h3 class="artTitle">Beispiel 1</h3>
-                            <div class="artSubtitle">Vorstellung einiger Formularelemente</div>
+                            <div class="artSubtitle">Vorstellung einiger Formularelemente. Die Beschriftungen (<code>label</code>) sind über das Attribut <code>for</code> jeweils mit dem entsprechenden Eingabefeld verknüpft. <br>Alternativ können die Eingabefelder auch jeweils innerhalb des Beschriftungselementes plaziert werden. Dann kann auf das <code>for</code>-Attribut verzeichtet werden.</div>
                         </header>
                         <div class="sandboxContainer">
 
                             <form action="" class="demoForm" id="bspl1" autocomplete="off">
-                                <div class="elementBox">
-                                    <label>Suche
-                                        <input type="search" name="search" id="search" autofocus>
-                                    </label>
-
+                                <div class="fElementWrapper">
+                                    <label for="search">Suche</label>
+                                    <input type="search" name="search" id="search" autofocus>
+                                    <div class="elementInfo">
+                                        <details>
+                                            <summary>
+                                                Das Eingabefeld verfügt über die Attribute <code>type="search"</code> und <code>autofocus</code>.
+                                            </summary>
+                                            <p>
+                                                Mit <code>"search"</code> wird das Feld als Suchfeld ausgezeichnet. Die Darstellung kann zwischen verschiedenen Betriebssystemen unterschiedlich sein. Aktuelle Browser können bereits zuvor eingegebene Begriffe als Vorschläge anzeigen.
+                                            </p>
+                                            <p>
+                                                Durch die Verwendung von <code>autofocus</code> wird das Eingabefeld beim Laden der Seite automatisch fokussiert.
+                                            </p>
+                                        </details>
+                                    </div>
                                 </div>
-                                
+                                <div class="fElementWrapper">
+                                    <label for="lName">Nachname</label>
+                                    <input type="text" name="lName" id="lName" placeholder="Ihr Nachname" required>
+                                    <div class="elementInfo">
+                                        <details>
+                                            <summary>
+                                                Das Eingabefeld verfügt über die Attribute <code>type="text"</code>, <code>placeholder="Ihr Nachname"</code> und <code>required</code>.
+                                            </summary>
+                                            <p>
+                                                Mit <code>"text"</code> wird das Feld als gewöhnliches Textfelde ausgezeichnet. 
+                                            </p>
+                                            <p>
+                                                Mit dem Attribut <code>placeholder</code> und einem passenden Wert kann dem User eine zusätzlich Hilfe beim Ausfüllen des Formulars bereitgestellt werden.
+                                            </p>
+                                            <p>
+                                                Durch die Verwendung von <code>required</code> wird dieses Feld als obligatisch auszufüllen ausgezeichnet. Kommt der User dem nicht nach wird ein entsprechender Hinweis eingegeblendet.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
+                                <div class="fElementWrapper">
+                                    <label for="age">Alter</label>
+                                    <input type="number" name="age" id="age" min="0" max="120" step="1">
+                                    <div class="elementInfo">
+                                        <details>
+                                            <summary>
+                                                Das Eingabefeld verfügt über die Attribute <code>type="number"</code> <code>min="0"</code>, <code>max="120"</code> und <code>step="3"</code>.
+                                            </summary>
+                                            <p>
+                                                Mit <code>type="number"</code> wird das Eingabefeld dahingehend ausgezeichnet, dass dieses ausschließlich Zahlenwerte akzeptiert. Außerdem werden innerhalb des Feldes kleine Pfeile eingeblendet mit denen ein Zahlenwert durch klicken, alternativ zur Eingabe über die Tastatur, eingestellt werden kann.
+                                            </p>
+                                            <p>
+                                                Mit den Attributen <code>min</code> und <code>max</code> können sinnvolle Minimal- bzw. Maximalwerte definiert werden.
+                                            </p>
+                                            <p>
+                                                Durch die Verwendung von <code>step</code> wird die Schrittweite definiert, mit der der Wert im Eingabefeld beim klicken auf die Pfeile erhöht, bzw. verringert werden soll.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
+                                <div class="fElementWrapper">
+                                    
+                                </div>
                                 <button type="button" id="subBspl1Data" form="bspl1">Senden</button>
                             </form>
                         
