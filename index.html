@@ -45,9 +45,7 @@
                         <div class="sectionSubtitle"><!-- INSERT SUBTITLE HERE --></div>
                     </header>
                     <div class="sectionContentText">
-                        <p>
-                            Erfahren Sie nachfolgend einiges über die Formularelemente in HTML5.
-                        </p>
+                        Zum optimalen Nachvollziehen der folgenden Beispiele öffnen Sie die Entwickerwerkzeuge des Browsers, bzw. lassen Sie sich den Quelltext der Seite anzeigen.
                     </div>
                     <article class="demoBox">
                         <header class="demoBoxHeader">
@@ -135,7 +133,7 @@
                                     <div class="elementInfo">
                                         <details>
                                             <summary>
-                                                Mit dem Eingabefeld <code>range</code> kann in Form eines Schiebereglers (Slider) ein Wert eingestellt werden.
+                                                Mit dem Eingabefeld <code>type="range"</code> kann in Form eines Schiebereglers (Slider) ein Wert eingestellt werden.
                                             </summary>
                                             <p>
                                                 Wie bei <code>type="number"</code> definieren hier <code>min</code> und <code>max</code> den erlaubten Wertebereich. Ebenso steuert auf hier <code>step</code> die Schrittweite.
@@ -151,12 +149,63 @@
                                     </div>
                                 </div>
                                 <div class="fElementWrapper">
-                                    
+                                    <label for="userEmail">E-Mail</label>
+                                    <input type="email" name="userEmail" id="userEmail">
+                                    <div class="elementInfo">
+                                        Das Eingabefeld vom <code>type="email"</code> ermöglicht die Eingabe einer E-Mailadresse. <br>
+                                        Es findet eine rudimentäre Validierung statt, indem auf das Vorkommen eines @-Zeichen geprüft wird und bei dessen Fehlen ein entsprechender Hinweis eingeblendet wird, wenn sich der Mauszeiger über dem Eingabefeld befindet.
+                                    </div>
                                 </div>
                                 <div class="fElementWrapper">
-                                    
+                                    <label for="userURL">Webadresse</label>
+                                    <input type="url" name="userURL" id="userURL">
+                                    <div class="elementInfo">
+                                        Das Eingabefeld vom <code>type="url"</code> ermöglicht die Eingabe einer Webadresse. <br>
+                                        Auch hier findet eine oberflächliche Validierung der Eingabe statt, indem geprüft wird ob "http://", bzw. "https://" in der Eingabe vorkommt.
+                                    </div>
                                 </div>
+                                <div class="fElementWrapper">
+                                    <label for="userFon">Telefon</label>
+                                    <input type="tel" name="userFon" id="userFon" pattern="[0-9]{5,12}">
+                                    <div class="elementInfo">
+                                        <details>
+                                            <summary>
+                                                Mit dem Eingabefeld <code>type="tel"</code> kann ein Eingabefeld zur Eingabe einer Telefonnummer ausgezeichnet werden.
+                                            </summary>
+                                            <p>
+                                                Auch wenn eine Validierung per JavaScript und/oder Serverseitig erfolgt (was unerlässlich ist!), sollte gleich an dieser Stelle das <code>pattern</code>-Attribut verwendet werden. In diesem Beispiel wird so zumindest erreicht, dass ein Hinweis eingeblendet wird, wenn die Eingabe vom definierten Muster (min. 5, max. 12 Zahlen) abweicht. (Auch hier muss sich der Mauszeiger über dem Eingabefeld befinden, damit der Hinweis angezeigt wird.)
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
+                                <div class="fElementWrapper">
+                                    <label for="travelInterests">Reiseziele</label>
+                                    <input type="text" list="intList" name="travelInterests" id="travelInterests">
+                                    <datalist id="intList">
+                                        <option value="Deutsche Nordsee">
+                                        <option value="Deutsche Ostsee">
+                                        <option value="Niederlande">
+                                        <option value="Frankreich">
+                                        <option value="Spanien">
+                                        <option value="Italien">
+                                    </datalist>
+                                    <div class="elementInfo">
+                                        <details>
+                                            <summary>
+                                                Ein Eingabefeld vom <code>type="text"</code> wird hier mit einem <code>datalist</code>-Element verknüpft. Der User kann so aus einer Liste von Optionen wählen, oder seler eine Eingabe vornehmen. Je nach Anwendungsvall ist dies einem <code>select</code>-Element vorzuziehen.
+                                            </summary>
+                                            <p>
+                                                Die Verknüpfung erfolgt im <code>input</code>-Element unter Verwendung des <code>list</code>-Attributes. Dieses erhält als Wert die ID der zu verwendenden <code>datalist</code>
+                                            </p>
+                                            <p>
+                                                Innerhalb der <code>datalist</code> befinden sich die Einzelnen <code>option</code>-Elemente, dessen jeweilige <code>value</code>-Attribute, die Auswahlmöglichkeiten sind.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
+
                                 <button type="button" id="subBspl1Data" form="bspl1">Senden</button>
+                            
                             </form>
                         
                             <dialog id="bspl1Output">
