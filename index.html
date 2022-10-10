@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="age">Alter</label>
-                                    <input type="number" name="age" id="age" min="0" max="120" step="1">
+                                    <input type="number" name="age" id="age" min="0" max="120" step="0">
                                     <div class="elementInfo">
                                         <details>
                                             <summary>
@@ -115,6 +115,45 @@
                                     </div>
                                 </div>
                                 <div class="fElementWrapper">
+                                    <label for="age">Reisedatum</label>
+                                    <input type="date" name="date" id="date">
+                                    <div class="elementInfo">
+                                        Das Eingabefeld vom <code>type="date"</code> ermöglicht die Eingabe eines Datums.    
+                                    </div>
+                                </div>
+                                <div class="fElementWrapper">
+                                    <label for="favColor">Lieblingsfarbe</label>
+                                    <input type="color" name="favColor" id="favColor">
+                                    <div class="elementInfo">
+                                        Das Eingabefeld vom <code>type="color"</code> ermöglicht die Eingabe/Selektion einer Farbe.    
+                                    </div>
+                                </div>
+                                <div class="fElementWrapper">
+                                    <label for="age">Zufriedenheit</label>
+                                    <input type="range" name="satisfaction" id="satisfaction" min="1" max="10" step="1" value="5">
+                                    <input type="text" class="outputField" id="satOutput" value="5" disabled>
+                                    <div class="elementInfo">
+                                        <details>
+                                            <summary>
+                                                Mit dem Eingabefeld <code>range</code> kann in Form eines Schiebereglers (Slider) ein Wert eingestellt werden.
+                                            </summary>
+                                            <p>
+                                                Wie bei <code>type="number"</code> definieren hier <code>min</code> und <code>max</code> den erlaubten Wertebereich. Ebenso steuert auf hier <code>step</code> die Schrittweite.
+                                            </p>
+                                            <p>
+                                                Mit dem Attribut <code>value</code> lässt sich ein initaler Wert definieren, der beim laden der Seite eingestellt wird. in diesem Fall ist dies der Wert <code>"5"</code>.
+                                            </p>
+                                            <p>
+                                                Dem Slider schließt sich hier ein weiters Eingabefeld vom <code>type="text"</code> an. Dieses ist jedoch durch Verwendung des Attributes <code>disabled</code> deaktiviert. Das bedeutet, dass in diesem Eingabefeld keine eingaben gemacht werden können. <br>
+                                                Stattdessen wird hier der im Slider eingestellte Wert unmittelbar angezeigt.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
+                                <div class="fElementWrapper">
+                                    
+                                </div>
+                                <div class="fElementWrapper">
                                     
                                 </div>
                                 <button type="button" id="subBspl1Data" form="bspl1">Senden</button>
@@ -124,6 +163,7 @@
                                 <h3>Dialog</h3>
                                 <button type="button">Schließen</button>
                             </dialog>
+
                         </div>
                     </article>
                 </section>

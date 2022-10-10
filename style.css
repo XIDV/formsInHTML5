@@ -114,6 +114,11 @@ h2 {
 
 
 /* Formular-Styling ######################################################## */
+
+.outputField {
+    width: 3rem;
+}
+
 .elementInfo {
     background-color: beige;
     font-size: 1rem;
