@@ -57,7 +57,7 @@
                             <form action="" class="demoForm" id="bspl1" autocomplete="off">
                                 <div class="fElementWrapper">
                                     <label for="search">Suche</label>
-                                    <input type="search" name="search" id="search" autofocus>
+                                    <input type="search" name="search" id="search" class="bspl1Input" autofocus>
                                     <div class="elementInfo">
                                         <details>
                                             <summary>
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="lName">Nachname</label>
-                                    <input type="text" name="lName" id="lName" placeholder="Ihr Nachname" required>
+                                    <input type="text" name="lName" id="lName" class="bspl1Input" placeholder="Ihr Nachname" required>
                                     <div class="elementInfo">
                                         <details>
                                             <summary>
@@ -94,7 +94,7 @@
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="age">Alter</label>
-                                    <input type="number" name="age" id="age" min="0" max="120" step="0">
+                                    <input type="number" name="age" id="age" class="bspl1Input" min="0" max="120" step="0">
                                     <div class="elementInfo">
                                         <details>
                                             <summary>
@@ -114,21 +114,21 @@
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="age">Reisedatum</label>
-                                    <input type="date" name="date" id="date">
+                                    <input type="date" name="date" id="date" class="bspl1Input">
                                     <div class="elementInfo">
                                         Das Eingabefeld vom <code>type="date"</code> ermöglicht die Eingabe eines Datums.    
                                     </div>
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="favColor">Lieblingsfarbe</label>
-                                    <input type="color" name="favColor" id="favColor">
+                                    <input type="color" name="favColor" id="favColor" class="bspl1Input">
                                     <div class="elementInfo">
                                         Das Eingabefeld vom <code>type="color"</code> ermöglicht die Eingabe/Selektion einer Farbe.    
                                     </div>
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="age">Zufriedenheit</label>
-                                    <input type="range" name="satisfaction" id="satisfaction" min="1" max="10" step="1" value="5">
+                                    <input type="range" name="satisfaction" id="satisfaction" class="bspl1Input" min="1" max="10" step="1" value="5">
                                     <input type="text" class="outputField" id="satOutput" value="5" disabled>
                                     <div class="elementInfo">
                                         <details>
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="userEmail">E-Mail</label>
-                                    <input type="email" name="userEmail" id="userEmail">
+                                    <input type="email" name="userEmail" id="userEmail" class="bspl1Input">
                                     <div class="elementInfo">
                                         Das Eingabefeld vom <code>type="email"</code> ermöglicht die Eingabe einer E-Mailadresse. <br>
                                         Es findet eine rudimentäre Validierung statt, indem auf das Vorkommen eines @-Zeichen geprüft wird und bei dessen Fehlen ein entsprechender Hinweis eingeblendet wird, wenn sich der Mauszeiger über dem Eingabefeld befindet.
@@ -158,7 +158,7 @@
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="userURL">Webadresse</label>
-                                    <input type="url" name="userURL" id="userURL">
+                                    <input type="url" name="userURL" id="userURL" class="bspl1Input">
                                     <div class="elementInfo">
                                         Das Eingabefeld vom <code>type="url"</code> ermöglicht die Eingabe einer Webadresse. <br>
                                         Auch hier findet eine oberflächliche Validierung der Eingabe statt, indem geprüft wird ob "http://", bzw. "https://" in der Eingabe vorkommt.
@@ -166,7 +166,7 @@
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="userFon">Telefon</label>
-                                    <input type="tel" name="userFon" id="userFon" pattern="[0-9]{5,12}">
+                                    <input type="tel" name="userFon" id="userFon" class="bspl1Input" pattern="[0-9]{5,12}">
                                     <div class="elementInfo">
                                         <details>
                                             <summary>
@@ -180,7 +180,7 @@
                                 </div>
                                 <div class="fElementWrapper">
                                     <label for="travelInterests">Reiseziele</label>
-                                    <input type="text" list="intList" name="travelInterests" id="travelInterests">
+                                    <input type="text" list="intList" name="travelInterests" id="travelInterests" class="bspl1Input">
                                     <datalist id="intList">
                                         <option value="Deutsche Nordsee">
                                         <option value="Deutsche Ostsee">
@@ -209,8 +209,9 @@
                             </form>
                         
                             <dialog id="bspl1Output">
-                                <h3>Dialog</h3>
-                                <button type="button">Schließen</button>
+                                <h3>Ihre Eingaben:</h3>
+                                <div id="outputContainer"></div>
+                                <button type="button" id="closeDialogBspl1">Schließen</button>
                             </dialog>
 
                         </div>
