@@ -2,6 +2,7 @@
     /* Some colors */
     --primary: #16506E;
     --secondary: #C53DCC;
+    --glas: hsla(220, 100%, 80%, .5);
 
     /* Some dimensions */
     --mainDistance: 2rem;
@@ -113,6 +114,16 @@ h2 {
     padding: calc(var(--mainDistance) / 2);
 }
 
+dialog {
+    background-color: var(--glas);
+    border: none;
+    border-radius: var(--mainDistance);
+    box-shadow: .125rem .125rem .5rem .125rem var(--secondary);
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(10px);
+}
 
 /* Formular-Styling ######################################################## */
 label {
@@ -129,6 +140,13 @@ label {
     font-size: 1rem;
     padding: .5rem;
     margin: 1rem 0 2rem 0
+}
+
+button {
+    display: block;
+    width: 100%;
+    font: bold 2rem sans-serif;
+    margin: 0 auto;
 }
 
 code {

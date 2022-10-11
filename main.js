@@ -44,8 +44,14 @@ function showOutputDialog(inputValues) {
     // Ausgaben erzeugen
     for(element in inputValues) {
         const itemOut = document.createElement('p');
+        let itemValue = inputValues[element];
+        if(itemValue == "") {
+            itemValue = "nichts";
+        } else {
+            itemValue = `" ${itemValue} "`;
+        }
         itemOut.setAttribute('id', `${element}Out`);
-        itemOut.textContent = ` Bei ${element} wurde ${inputValues[element]} eingegeben`;
+        itemOut.textContent = ` Bei ${element} wurde ${itemValue} eingegeben`;
         dialogOutputContainer.appendChild(itemOut);
     }
     
