@@ -45,13 +45,23 @@
                         <div class="sectionSubtitle"><!-- INSERT SUBTITLE HERE --></div>
                     </header>
                     <div class="sectionContentText">
-                        Zum optimalen Nachvollziehen der folgenden Beispiele öffnen Sie die Entwickerwerkzeuge des Browsers, bzw. lassen Sie sich den Quelltext der Seite anzeigen.
+                        <p>
+                            Zum optimalen Nachvollziehen der folgenden Beispiele öffnen Sie die Entwickerwerkzeuge des Browsers, bzw. lassen Sie sich den Quelltext der Seite anzeigen.
+                        </p>
                     </div>
                     <article class="demoBox">
                         <header class="demoBoxHeader">
                             <h3 class="artTitle">Beispiel 1</h3>
-                            <div class="artSubtitle">Vorstellung einiger Formularelemente. Die Beschriftungen (<code>label</code>) sind über das Attribut <code>for</code> jeweils mit dem entsprechenden Eingabefeld verknüpft. <br>Alternativ können die Eingabefelder auch jeweils innerhalb des Beschriftungselementes plaziert werden. Dann kann auf das <code>for</code>-Attribut verzeichtet werden.</div>
+                            <div class="artSubtitle">Vorstellung einiger Formularelemente</div>
                         </header>
+                        <div class="articleContentText">
+                            <p>
+                                Die Beschriftungen (<code>label</code>) sind über das Attribut <code>for</code> jeweils mit dem entsprechenden Eingabefeld verknüpft. <br>Alternativ können die Eingabefelder auch jeweils innerhalb des Beschriftungselementes plaziert werden. Dann kann auf das <code>for</code>-Attribut verzeichtet werden.
+                            </p>
+                            <p>
+                                In diesem Beispiel werden die eingegebenen, bzw. ausgewählten Werte, bei einem Klick auf den "Senden"-Button, über das <code>value</code>-Attribut des jeweiligen Eingabe-, bzw. Auswahlelement per JavaScript ausgelesen und in Form eines modalen Dialogs ausgegeben.
+                            </p>
+                        </div>
                         <div class="sandboxContainer">
 
                             <form action="" class="demoForm" id="bspl1" autocomplete="off">
@@ -87,7 +97,7 @@
                                                 Mit dem Attribut <code>placeholder</code> und einem passenden Wert kann dem User eine zusätzlich Hilfe beim Ausfüllen des Formulars bereitgestellt werden.
                                             </p>
                                             <p>
-                                                Durch die Verwendung von <code>required</code> wird dieses Feld als obligatisch auszufüllen ausgezeichnet. Kommt der User dem nicht nach wird ein entsprechender Hinweis eingegeblendet.
+                                                Durch die Verwendung von <code>required</code> wird dieses Feld als obligatisch auszufüllen ausgezeichnet. Ein entsprechender Hinweis wird eingeblendet, wenn sich der Mauszeiger über dem Eingabefeld befindet.
                                             </p>
                                         </details>
                                     </div>
@@ -104,7 +114,7 @@
                                                 Mit <code>type="number"</code> wird das Eingabefeld dahingehend ausgezeichnet, dass dieses ausschließlich Zahlenwerte akzeptiert. Außerdem werden innerhalb des Feldes kleine Pfeile eingeblendet mit denen ein Zahlenwert durch klicken, alternativ zur Eingabe über die Tastatur, eingestellt werden kann.
                                             </p>
                                             <p>
-                                                Mit den Attributen <code>min</code> und <code>max</code> können sinnvolle Minimal- bzw. Maximalwerte definiert werden.
+                                                Mit den Attributen <code>min</code> und <code>max</code> können dem Anwendungsfall entsprechend, sinnvolle Minimal- bzw. Maximalwerte definiert werden.
                                             </p>
                                             <p>
                                                 Durch die Verwendung von <code>step</code> wird die Schrittweite definiert, mit der der Wert im Eingabefeld beim klicken auf die Pfeile erhöht, bzw. verringert werden soll.
@@ -116,7 +126,17 @@
                                     <label for="age">Reisedatum</label>
                                     <input type="date" name="date" id="date" class="bspl1Input">
                                     <div class="elementInfo">
-                                        Das Eingabefeld vom <code>type="date"</code> ermöglicht die Eingabe eines Datums.    
+                                        <details>
+                                            <summary>
+                                                Das Eingabefeld vom <code>type="date"</code> ermöglicht die Eingabe eines Datums.
+                                            </summary>
+                                            <p>
+                                                Der User kann sich hier entscheiden ob er/sie ein Datum über die Tastatur eingibt, oder mit einem klick auf das Kalender-Symbol am rechten Rand des Eingabefeldes ein entsprechendes Widget öffnet um so ein Datum zu wählen.
+                                            </p>
+                                            <p>
+                                                Die Gesstaltung des Feldes, bzw. des Kalender-Widgets kann sich von Browser zu Browser verschiedenen getaltet sein.
+                                            </p>
+                                        </details>
                                     </div>
                                 </div>
                                 <div class="fElementWrapper">
@@ -192,7 +212,7 @@
                                     <div class="elementInfo">
                                         <details>
                                             <summary>
-                                                Ein Eingabefeld vom <code>type="text"</code> wird hier mit einem <code>datalist</code>-Element verknüpft. Der User kann so aus einer Liste von Optionen wählen, oder seler eine Eingabe vornehmen. Je nach Anwendungsvall ist dies einem <code>select</code>-Element vorzuziehen.
+                                                Ein Eingabefeld vom <code>type="text"</code> wird hier mit einem <code>datalist</code>-Element verknüpft. Der User kann so aus einer Liste von Optionen wählen, oder selber eine Eingabe vornehmen. Je nach Anwendungsfall ist dies einem <code>select</code>-Element vorzuziehen.
                                             </summary>
                                             <p>
                                                 Die Verknüpfung erfolgt im <code>input</code>-Element unter Verwendung des <code>list</code>-Attributes. Dieses erhält als Wert die ID der zu verwendenden <code>datalist</code>

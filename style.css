@@ -108,7 +108,8 @@ h2 {
     color: white;
 }
 
-.sandboxContainer {
+.sandboxContainer,
+.articleContentText {
     padding: calc(var(--mainDistance) / 2);
 }
 
